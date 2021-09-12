@@ -10,5 +10,6 @@ The script only removes the first matching table row, so I recommend putting it 
 ```js
 if (parseFloat(document.getElementsByClassName('td__spec td__spec--5')[0].innerText) >= 20) {
   document.getElementsByClassName('td__spec td__spec--5')[0].parentElement.remove();
+  document.querySelector('h2.pp-filter-count').innerHTML = parseInt(document.querySelector('h2.pp-filter-count').innerHTML) - 1 + ' Compatible Products'
 }
 ```
