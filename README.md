@@ -5,7 +5,6 @@ Some Userscripts for pcpartpicker.com I created
 ## Custom Filtering
 Filter the results by the value of a certain column.
 
-replace >= with the operator which should be used for filtering..
 note that the script only removes the first matching table row
 ```js
 let column = 5; //replace 5 with the number of the column
