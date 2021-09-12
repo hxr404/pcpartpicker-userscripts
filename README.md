@@ -11,7 +11,7 @@ let max_limit = 20; //replace 20 with the maximum limit
 let min_limit = 0; //replace 0 wuth the minimum limit
 
 console.log('Script made by (c) hxr404');
-console.log('Filtering by ' + document.querySelector('h.th--sortable > th[data-column="'+column+'"]').innerText + '...');
+console.log('Filtering by ' + document.querySelector('th[data-column="'+column+'"]').innerText + '...');
 column -= 1;
 document.getElementsByClassName('td__spec td__spec--'+column).forEach(element => {
   if (parseFloat(element.innerText) >= max_limit || parseFloat(element.innerText) <= min_limit) {
