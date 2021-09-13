@@ -42,14 +42,13 @@ function customfilter(column, min_limit, max_limit) {
     max = max_limit;
   }
  
-  let uisliderleft = '33.1415';
-  let uisliderright = '150.142';
-  let uisliderrange_left = '20.5882';
-  let uisliderrange_width = '58.8235';
-  let uisliderhandle_r = '20.5882';
-  let uisliderhandle_l  = '79.4118';
+  let uisliderleft = '33.1415'; //px
+  let uisliderright = '150.142'; //px
+  let uisliderrange = 20.5882; //%
+  let uisliderhandle_r = uisliderrange; //%
+  let uisliderhandle_l  = '79.4118'; //%
 
-  let filterdiv = '<div class="group group--filter" id="filterdiv_CUSTOM"><h3 class="group__title group__title--trigger js-trigger-filter">' + title + '<span class="collapse-toggle"></span></h3><div id="filter_slide_CUSTOM" class="filter_slider--wrapper group__content"><div class="obj-filter-labelbox ui-slider-horizontal-labelbox">&nbsp;<div class="obj-filter-slide-left ui-slider-horizontal-labelbox-label labelbox-label--left" style="left: ' + uisliderleft + 'px;"><a href="#">' + min + '</a><div class="labelbox-input labelbox-input--left"><input type="text" size="4" class="left ui-slider-horizontal-editbox"> ' + unit + '</div></div><div class="obj-filter-slide-right ui-slider-horizontal-labelbox-label labelbox-label--right" style="left: ' + uisliderright + 'px;"><a href="#">' + max + '</a><div class="labelbox-input labelbox-input--right"><input type="text" size="4" class="right ui-slider-horizontal-editbox"> ' + unit + '</div></div></div><div class="obj-filter-dualslide ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: ' + uisliderrange_left + '%; width: ' + uisliderrange_width + '%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: ' + uisliderhandle_r + '%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: ' + uisliderhandle_l + '%;"></span></div></div></div>';
+  let filterdiv = '<div class="group group--filter" id="filterdiv_CUSTOM"><h3 class="group__title group__title--trigger js-trigger-filter">' + title + '<span class="collapse-toggle"></span></h3><div id="filter_slide_CUSTOM" class="filter_slider--wrapper group__content"><div class="obj-filter-labelbox ui-slider-horizontal-labelbox">&nbsp;<div class="obj-filter-slide-left ui-slider-horizontal-labelbox-label labelbox-label--left" style="left: ' + uisliderleft + 'px;"><a href="#">' + min + '</a><div class="labelbox-input labelbox-input--left"><input type="text" size="4" class="left ui-slider-horizontal-editbox"> ' + unit + '</div></div><div class="obj-filter-slide-right ui-slider-horizontal-labelbox-label labelbox-label--right" style="left: ' + uisliderright + 'px;"><a href="#">' + max + '</a><div class="labelbox-input labelbox-input--right"><input type="text" size="4" class="right ui-slider-horizontal-editbox"> ' + unit + '</div></div></div><div class="obj-filter-dualslide ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content"><div class="ui-slider-range ui-corner-all ui-widget-header" style="left: ' + uisliderrange + '%; width: ' + 100 - uisliderrange + '%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: ' + uisliderhandle_r + '%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: ' + uisliderhandle_l + '%;"></span></div></div></div>';
   
   document.querySelector('div.offCanvas:nth-child(2) > div:nth-child(2)').insertAdjacentHTML('beforeend', filterdiv)
 
